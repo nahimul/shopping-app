@@ -1,1 +1,16 @@
-<h1 class="text-center text-green-900 text-3xl">Shopping App</h1>
+<div class="app-container">
+    <div class="header" >
+
+        <app-header (selectedFeature)="onNavigate($event)"></app-header>
+    </div>
+    @if( loadedFeature === 'recipe')    {
+        <div class="recipes" >
+            <app-recipes></app-recipes>
+        </div>
+    } @else {
+        <div class="shopping-list" >
+            <app-shoping-list></app-shoping-list>
+        </div>
+    }
+
+</div>
